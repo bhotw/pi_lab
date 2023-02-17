@@ -32,15 +32,9 @@ GPIO.setup(led_genn, GPIO.OUT)
 GPIO.setup(led_yell, GPIO.OUT)
 GPIO.setup(led_blue, GPIO.OUT)
 
-# Initialize pygame mixer
-mixer.init()
-
 # Remember the current and previous button states
 current_state = True
 prev_state = True
-
-# Load the sounds
-sound = mixer.Sound('applause-1.wav')
 
 # Function for blinking the lights for seconds
 
