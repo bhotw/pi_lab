@@ -43,11 +43,14 @@ def blink_light(sec):
     while (count < sec):
         GPIO.output(led_redd, GPIO.HIGH)  # Turn LED on
         time.sleep(0.5)					 # Deley for 1 second
-        GPIO.output(led_genn, GPIO.LOW)   # Turn LED off
+        GPIO.output(led_redd, GPIO.LOW)   # Turn LED off
+
         time.sleep(0.5)
-        GPIO.output(led_yell, GPIO.HIGH)  # Turn LED on
+
+        GPIO.output(led_genn, GPIO.HIGH)  # Turn LED on
         time.sleep(0.5)					 # Deley for 1 second
-        GPIO.output(led_blue, GPIO.LOW)   # Turn LED off
+        GPIO.output(led_genn, GPIO.LOW)   # Turn LED off
+
         time.sleep(0.5)
         count += 1
 
