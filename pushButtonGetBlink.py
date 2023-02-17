@@ -59,12 +59,28 @@ def blink_light(sec):
 
 try:
     while True:
-        current_state = GPIO.input(btn_blue or btn_yell or btn_genn or btn_redd)
-        if (current_state == False) and (prev_state == True):
-            blink_light(4)
-            print("Lights Blinking")
+        # current_state = GPIO.input(btn_blue or btn_yell or btn_genn or btn_redd)
+        # if (current_state == False) and (prev_state == True):
+        #     blink_light(4)
+        #     print("Lights Blinking")
+        #prev_state = current_state
 
-        prev_state = current_state
+        if(btn_blue):
+            GPIO.output(led_blue, GPIO.LOW)
+        else:
+            GPIO.output(led_blue, GPIO.HIGH)
+        if(btn_yell):
+            GPIO.output(led_yell, GPIO.LOW)
+        else:
+            GPIO.output(led_yell, GPIO.HIGH)
+        if(btn_genn):
+            GPIO.output(led_genn, GPIO.LOW)
+        else:
+            GPIO.output(led_genn, GPIO.HIGH)
+        if(btn_genn):
+            GPIO.output(led_genn, GPIO.LOW)
+        else:
+            GPIO.output(led_genn, GPIO.HIGH)
 
 
 # When you press ctrl+c, this will be called
