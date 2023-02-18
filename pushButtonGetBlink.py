@@ -54,33 +54,42 @@ def blink_light(sec):
         time.sleep(0.5)
         count += 1
 
+# blink with a loop. this function will blink starting from the color of the button that was pressed 
 
+def blink(start):
+
+    leds = [led_redd, led_genn, led_yell, led_blue]
+
+    for i in range(4):
+        GPIO.output(leds[start], GPIO.HIGH)
+        time.sleep(.05)
+        GPIO.output(leds[start], GPIO.LOW)
+        if start == 4:
+            start = 1
+        else:
+            start += 1
+
+
+# this is to know what button was pressed. 
+button = 0
 # if button is pushed, light up LED
 
 try:
     while True:
-        # current_state = GPIO.input(btn_blue or btn_yell or btn_genn or btn_redd)
-        # if (current_state == False) and (prev_state == True):
-        #     blink_light(4)
-        #     print("Lights Blinking")
-        #prev_state = current_state
 
-        if(btn_blue):
-            GPIO.output(led_blue, GPIO.LOW)
-        else:
-            GPIO.output(led_blue, GPIO.HIGH)
-        if(btn_yell):
-            GPIO.output(led_yell, GPIO.LOW)
-        else:
-            GPIO.output(led_yell, GPIO.HIGH)
-        if(btn_genn):
-            GPIO.output(led_genn, GPIO.LOW)
-        else:
-            GPIO.output(led_genn, GPIO.HIGH)
-        if(btn_genn):
-            GPIO.output(led_genn, GPIO.LOW)
-        else:
-            GPIO.output(led_genn, GPIO.HIGH)
+		if(GPIO.input(btn_blue)):
+			button = 0
+
+        elif(GPIO.input(btn_yell)):
+			button = 1
+		
+        elif(GPIO.input(btn_genn)):
+			button = 2
+
+        elif(GPIO.input(btn_redd)):
+			button = 3
+		
+        blink(button)
 
 
 # When you press ctrl+c, this will be called
