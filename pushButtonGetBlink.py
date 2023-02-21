@@ -76,16 +76,16 @@ button = 0
 
 try:
     while True:
+        # if(GPIO.input(btn_blue)):
+        #     button = 0
+        # elif(GPIO.input(btn_yell)):
+        #     button = 1
+        # elif(GPIO.input(btn_genn)):
+        #     button = 2
+        # elif(GPIO.input(btn_redd)):
+        #     button = 3
         if(GPIO.input(btn_blue)):
-			button = 0
-        elif(GPIO.input(btn_yell)):
-			button = 1
-        elif(GPIO.input(btn_genn)):
-			button = 2
-        elif(GPIO.input(btn_redd)):
-			button = 3
-
-        blink(button)
+            blink(button)
 
 
 # When you press ctrl+c, this will be called
