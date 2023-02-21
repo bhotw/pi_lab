@@ -76,15 +76,15 @@ button = 0
 
 try:
     while True:
-        # if(GPIO.input(btn_blue)):
-        #     button = 0
-        # elif(GPIO.input(btn_yell)):
-        #     button = 1
-        # elif(GPIO.input(btn_genn)):
-        #     button = 2
-        # elif(GPIO.input(btn_redd)):
-        #     button = 3
-        if GPIO.input(btn_blue):
+        if(GPIO.input(btn_blue)):
+            button = 0
+        elif(GPIO.input(btn_yell)):
+            button = 1
+        elif(GPIO.input(btn_genn)):
+            button = 2
+        elif(GPIO.input(btn_redd)):
+            button = 3
+        if button == 0 or button == 1 or button == 2 or button == 3:
             print ("hi")
         else:
             blink(button)
