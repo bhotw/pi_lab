@@ -84,7 +84,7 @@ try:
         #     button = 2
         # elif(GPIO.input(btn_redd)):
         #     button = 3
-        if(GPIO.input(btn_blue)):
+        if GPIO.input(btn_blue):
             blink(button)
 
 
