@@ -78,16 +78,13 @@ try:
     while True:
         if(GPIO.input(btn_blue)):
 			button = 0
-
         elif(GPIO.input(btn_yell)):
 			button = 1
-
         elif(GPIO.input(btn_genn)):
 			button = 2
-
         elif(GPIO.input(btn_redd)):
 			button = 3
-		
+
         blink(button)
 
 
