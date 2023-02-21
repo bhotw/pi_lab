@@ -54,7 +54,7 @@ def blink_light(sec):
         time.sleep(0.5)
         count += 1
 
-# blink with a loop. this function will blink starting from the color of the button that was pressed 
+# blink with a loop. this function will blink starting from the color of the button that was pressed
 
 def blink(start):
 
@@ -70,19 +70,18 @@ def blink(start):
             start += 1
 
 
-# this is to know what button was pressed. 
+# this is to know what button was pressed.
 button = 0
 # if button is pushed, light up LED
 
 try:
     while True:
-
-		if(GPIO.input(btn_blue)):
+        if(GPIO.input(btn_blue)):
 			button = 0
 
         elif(GPIO.input(btn_yell)):
 			button = 1
-		
+
         elif(GPIO.input(btn_genn)):
 			button = 2
 
