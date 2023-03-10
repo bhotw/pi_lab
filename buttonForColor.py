@@ -35,25 +35,29 @@ try:
 	while True:
 		if(GPIO.input(btn_genn)):
 			GPIO.output(led_genn, GPIO.LOW)
-		else:				 
+		else:
 			GPIO.output(led_genn, GPIO.HIGH)
-			
+			print("Green")
+
 		if(GPIO.input(btn_redd)):
 			GPIO.output(led_redd, GPIO.LOW)
-		else:				 
+		else:
 			GPIO.output(led_redd, GPIO.HIGH)
-			
+			print("Red")
+
 		if(GPIO.input(btn_yell)):
 			GPIO.output(led_yell, GPIO.LOW)
-		else:				 
+		else:
 			GPIO.output(led_yell, GPIO.HIGH)
-			
+			print("Yellow")
+
 		if(GPIO.input(btn_blue)):
 			GPIO.output(led_blue, GPIO.LOW)
-		else:				 
+		else:
 			GPIO.output(led_blue, GPIO.HIGH)
-			
-		
-		
+			print("Blue")
+
+
+
 finally:
 	GPIO.cleanup()
